@@ -3,26 +3,29 @@ import java.util.Arrays;
 
 
 public class Main {
-
-
+    static int playerX = 0;
+    static int playerY = 0;
+    static boolean done = true;
+   static Scanner s = new Scanner(System.in);
+    static String response = s.nextLine();
+static boolean tutorial = true;
     public static void main(String[] args) throws InterruptedException {
-        int playerX = 0;
-        int playerY = 0;
+
         String[] yesList = {"yes", "yea", "yup", "ye", "yas", "yuh"};
         String[] noList = {"no", "nope", "nuh-uh","nah","nuhuh"};
-        Scanner s = new Scanner(System.in);
+
 
 
         System.out.println("Oh you are awake now.");
         System.out.println("You hurt yourself pretty badly there.");
         System.out.print("What is your name? (leave empty for the default name: Sam) - ");
 
-        String talk = s.nextLine();
+
         PlayerCharacter mainCharacter = new PlayerCharacter(); //    gets name and creates character
-        if(talk == ""){
+        if(response == ""){
             mainCharacter.characterCreator("Sam");
         }else {
-            mainCharacter.characterCreator(talk);
+            mainCharacter.characterCreator(response);
         }
         String name = mainCharacter.getName();
         System.out.println("\nNice to meet you " + name + ".");
@@ -45,7 +48,11 @@ public class Main {
 
 
 
-        if (Arrays.asList(yesList).contains(talk.toLowerCase())) {
+
+
+
+
+        if (Arrays.asList(yesList).contains(response.toLowerCase())) {
           //  System.out.println("Sure, let me tell you more about this world.");
             // Add your code here for what happens if the input is in the yesList
         } else {
@@ -53,6 +60,7 @@ public class Main {
             // Add your code here for what happens if the input is not in the yesList
         }
     }
+
 
 
 }
