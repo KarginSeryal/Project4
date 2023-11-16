@@ -2,10 +2,10 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 
-public class Main {
+public class  Main {
     static int playerX = 0;
     static int playerY = 0;
-    static boolean done = true;
+    static boolean done = false;
    static Scanner s = new Scanner(System.in);
     static String response = s.nextLine();
 static boolean tutorial = true;
@@ -44,6 +44,7 @@ static boolean tutorial = true;
         Thread.sleep(4000);
         System.out.println("*objective: find shelter before nightfall.*");
 
+        PlayerActions.action();
 
 
 

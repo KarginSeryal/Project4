@@ -16,7 +16,7 @@ public class PlayerCharacter {
         hunger = 120;
     }
 
-    public void inventory(){
+    public void playerInventory(){
         fruit = 10;
         water = 5;
     }
@@ -65,6 +65,8 @@ public class PlayerCharacter {
     public void setGoodness(int deed){
         goodness += deed;
     }
+
+
 
 
 }
