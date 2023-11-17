@@ -1,3 +1,4 @@
+import javax.swing.text.Highlighter;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -7,7 +8,9 @@ public class  Main {
     static int playerY = 0;
     static boolean done = false;
    static Scanner s = new Scanner(System.in);
-    static String response = s.nextLine();
+    static String response;
+    static PlayerCharacter mainCharacter = new PlayerCharacter();
+
 static boolean tutorial = true;
     public static void main(String[] args) throws InterruptedException {
 
@@ -17,17 +20,20 @@ static boolean tutorial = true;
 
 
         System.out.println("Oh you are awake now.");
+        Thread.sleep(1000);
         System.out.println("You hurt yourself pretty badly there.");
+        Thread.sleep(1000);
         System.out.print("What is your name? (leave empty for the default name: Sam) - ");
+        response = s.nextLine();
 
-
-        PlayerCharacter mainCharacter = new PlayerCharacter(); //    gets name and creates character
-        if(response == ""){
+         //    gets name and creates character
+        if(response.isEmpty()){
             mainCharacter.characterCreator("Sam");
         }else {
             mainCharacter.characterCreator(response);
         }
         String name = mainCharacter.getName();
+        Thread.sleep(1000);
         System.out.println("\nNice to meet you " + name + ".");
         Thread.sleep(2000);
         System.out.println("My name is Luna");
@@ -35,10 +41,10 @@ static boolean tutorial = true;
         System.out.println("I can't help you anymore than this.");
         Thread.sleep(2000);
         System.out.println("You should find your way to the city and try to find a shelter before night time");
-        Thread.sleep(1000);
-        System.out.println("Bye bye.  \n\n\n\n\n\n\n\n\n\n\n\n");
+        Thread.sleep(2000);
+        System.out.println("Hope we meet again. ;)");
         Thread.sleep(4000);
-        System.out.println("*you are now alone, all you see around you is a forest*");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n*you are now alone, all you see around you is a forest*");
         Thread.sleep(4000);
         System.out.println("*the kind person has left you some food and water*");
         Thread.sleep(4000);
@@ -61,7 +67,6 @@ static boolean tutorial = true;
             // Add your code here for what happens if the input is not in the yesList
         }
     }
-
 
 
 }
