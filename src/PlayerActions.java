@@ -3,7 +3,7 @@ public class PlayerActions {
         if(Main.mainCharacter.getHp() >= 1) {
             Main.done = false;
             if (Main.tutorial) {
-                System.out.println("*you can type help to open the help menu with all the commands*");
+                System.out.println("\n\n*you can type help to open the help menu with all the commands*");
                 System.out.println("*if you want to walk you can type: walk_(up, down, left, right)*");
                 Main.tutorial = false;
             }
