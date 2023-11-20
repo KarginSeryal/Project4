@@ -35,7 +35,7 @@ public class PlayerActions {
         Main.done = false;
         int outcome =(int) (Math.random()*17);
         switch (outcome) {
-            case 1, 2, 3, 4, 5: {
+            case 1, 2: {
                 Thread.sleep(2000);
                 System.out.println("\n*what amazing luck. you have found a mythic fruit.*");
                 Thread.sleep(2000);
@@ -53,6 +53,13 @@ public class PlayerActions {
                 Thread.sleep(2000);
                 System.out.println("*skill issue personally. should've looked where you were going*");
                 Main.mainCharacter.setHp(0);
+            }
+            case 3,4,5: {
+                Thread.sleep(2000);
+                System.out.println("\n*nice luck. you found some fruits on the tree above.*");
+                Thread.sleep(2000);
+                System.out.println("*it can help heal you and fill your hunger.*");
+                Main.mainCharacter.setFruit(Main.mainCharacter.getFruit() + 3);
             }
         }
 
