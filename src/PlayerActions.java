@@ -24,7 +24,9 @@ public class PlayerActions {
                     eventChecker();
                 case "search": search();
             }
+
             Main.done = true;
+            Main.response = "";
         }else{
             System.out.println("*try again or be gone. :)");
             System. exit(0);
@@ -40,12 +42,14 @@ public class PlayerActions {
                 System.out.println("\n*what amazing luck. you have found a mythic fruit.*");
                 Thread.sleep(2000);
                 System.out.println("*it will heal you completely and give you a strength bonus for a short amount of time when consumed*");
+                action();
             }
             case 6, 7, 8, 9, 10, 11, 12, 13, 14, 15: {
                 Thread.sleep(2000);
                 System.out.println("\n*what horrible luck. you have found a boot*");
                 Thread.sleep(2000);
                 System.out.println("*it is useless. throw it away.*");
+                action();
             }
             case 16: {
                 Thread.sleep(2000);
@@ -60,6 +64,7 @@ public class PlayerActions {
                 Thread.sleep(2000);
                 System.out.println("*it can help heal you and fill your hunger.*");
                 Main.mainCharacter.setFruit(Main.mainCharacter.getFruit() + 3);
+                action();
             }
         }
 
