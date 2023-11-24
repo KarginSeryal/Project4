@@ -8,7 +8,7 @@ public class PlayerCharacter {
     private int hp;
     private int goodness;
     private int notchApple;
-    private String debugPassword = "password123";
+    private final String debugPassword = "password123";
     public void characterCreator(String inputName){
         name = inputName;
         hp = (int) ((Math.random()*110)+90);
@@ -55,7 +55,7 @@ public class PlayerCharacter {
     public int getNotchApple() {
         return notchApple;
     }
-    public int setNotchApple(int amount){
+    public void setNotchApple(int amount){
         notchApple = amount;
     }
 

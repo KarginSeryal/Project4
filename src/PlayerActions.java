@@ -1,4 +1,5 @@
 public class PlayerActions {
+    static boolean combat1 = false;
     public static void action() throws InterruptedException {
         if(Main.mainCharacter.getHp() >= 1) {
             Main.done = false;
@@ -73,15 +74,21 @@ public class PlayerActions {
 
 
     public static void eventChecker(){
+        if(Main.playerX != 0 && Main.playerY != 0 && !combat1){
+            combat1 = true;
+            System.out.println("*welcome to the combat tutorial*");
+            Enemies.tutorialEnemy();
 
-        if(Main.playerX == 1 && Main.playerY == 0){
-            System.out.println("LETS GO EVENT");
-            System. exit(0);
         }
 
 
 
 
+    }
+    public static void help(){
+        System.out.println("*\n\n\nwalk_(up, down, left, right)*");
+        System.out.println("*search (explore for items around you)*");
+        System.out.println("**");
     }
 
 
