@@ -1,7 +1,8 @@
 import javax.swing.text.Highlighter;
 import java.util.Scanner;
 import java.util.Arrays;
-
+import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 public class  Main {
     static int playerX = 0;
@@ -10,6 +11,7 @@ public class  Main {
    static Scanner s = new Scanner(System.in);
     static String response;
     static PlayerCharacter mainCharacter = new PlayerCharacter();
+
 
 static boolean tutorial = true;
     public static void main(String[] args) throws InterruptedException {

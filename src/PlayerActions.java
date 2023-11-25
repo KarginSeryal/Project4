@@ -24,6 +24,8 @@ public class PlayerActions {
                     Main.playerX++;
                     eventChecker();
                 case "search": search();
+                case "help": help();
+
             }
 
             Main.done = true;
@@ -85,10 +87,12 @@ public class PlayerActions {
 
 
     }
-    public static void help(){
-        System.out.println("*\n\n\nwalk_(up, down, left, right)*");
+    public static void help() throws InterruptedException {
+        System.out.println("\n\n\n*walk_(up, down, left, right)*");
         System.out.println("*search (explore for items around you)*");
-        System.out.println("**");
+        System.out.println("*more commands sooooooooooooooooooooooooooooooon*");
+        Thread.sleep(4000);
+        action();
     }
 
 
